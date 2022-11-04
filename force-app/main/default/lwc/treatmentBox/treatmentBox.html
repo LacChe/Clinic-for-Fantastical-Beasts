@@ -1,0 +1,12 @@
+<template>
+    <lightning-card>
+        <p class="slds-align_absolute-center slds-var-p-around_small" style="font-family:'Times New Roman'; font-size:15px">{treatmentText}</p>
+        <template if:true={treatsSymptoms}>
+            <div class="slds-align_absolute-center slds-var-p-around_small">
+                <template for:each={treatsSymptoms} for:item="t">
+                    <lightning-badge key={t} label={t.name} class={t.style} style="font-family:'Times New Roman'; font-size:15px"></lightning-badge>
+                </template>
+            </div>
+        </template>
+    </lightning-card>
+</template>

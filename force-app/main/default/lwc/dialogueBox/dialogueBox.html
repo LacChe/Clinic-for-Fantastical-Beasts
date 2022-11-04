@@ -1,0 +1,23 @@
+<template>
+    <lightning-card>
+        <template if:true={splashScreen}>
+            <p class="slds-align_absolute-center slds-var-p-around_small" style="font-family:'Times New Roman'; font-size:15px">{dialogueText}</p>
+        </template>
+        <template if:false={splashScreen}>
+            <template if:false={loading}>
+                <p class="slds-align_absolute-center slds-var-p-around_small" style="font-family:'Times New Roman'; font-size:15px">{dialogueText}</p>
+                <template if:true={prescribingStage}>
+                    <div class="slds-align_absolute-center slds-var-p-around_small">
+                        <template for:each={hasSymptoms} for:item="s">
+                            <lightning-badge key={s} label={s.name} class={s.style} style="font-family:'Times New Roman'; font-size:15px"></lightning-badge>
+                        </template>
+                    </div>
+                    <p class="slds-align_absolute-center slds-var-p-around_small" style="font-family:'Times New Roman'; font-size:15px">{cureText}</p>
+                </template>
+            </template>
+            <template if:true={loading}>
+                <p class="slds-align_absolute-center slds-var-p-around_small" style="font-family:'Times New Roman'; font-size:15px">{loadingText}</p>
+            </template>
+        </template>
+    </lightning-card>
+</template>

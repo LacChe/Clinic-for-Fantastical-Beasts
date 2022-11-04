@@ -1,0 +1,11 @@
+<template>
+    <template if:true={products}>
+        <!-- sldsValidatorIgnoreNextLine -->
+        <lightning-datatable
+            key-field="table-id"
+            data={products}
+            columns={columns}
+            onrowselection={rowSelection}>
+        </lightning-datatable>
+    </template>
+</template>

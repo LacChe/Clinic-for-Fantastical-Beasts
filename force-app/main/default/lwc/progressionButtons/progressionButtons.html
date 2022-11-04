@@ -1,0 +1,21 @@
+<template>
+    <lightning-card>
+        <template if:true={finance}>
+            <p class="slds-align_absolute-center slds-var-p-around_small" style="font-family:'Times New Roman'; font-size:15px">Funds: {financeText}</p>
+        </template>
+        <template if:false={finance}>
+            <p>No Finance Info</p>
+        </template>
+        <template if:true={showProgressionButtons}>
+            <template if:false={prescribingStage}>
+                <lightning-button label="Next Patient" onclick={getOpptyClick} class="slds-align_absolute-center" variant="brand" style="font-family:'Times New Roman'; font-size:15px"></lightning-button>
+            </template>
+            <template if:true={prescribingStage}>
+                <lightning-button label="Prescribe" onclick={prescribeClick} class="slds-align_absolute-center" variant="brand" style="font-family:'Times New Roman'; font-size:15px"></lightning-button>
+            </template>
+        </template>
+        <template if:false={showProgressionButtons}>
+            <lightning-button label="Loading..." class="slds-align_absolute-center" variant="brand" style="font-family:'Times New Roman'; font-size:15px"></lightning-button>
+        </template>
+    </lightning-card>
+</template>

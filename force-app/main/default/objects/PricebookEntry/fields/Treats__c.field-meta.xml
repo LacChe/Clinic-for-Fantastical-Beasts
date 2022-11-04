@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Treats__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( INCLUDES ( Product2.Treats__c , &quot;Cold&quot; ), &quot;Cold;&quot;, null) &amp;
+IF ( INCLUDES ( Product2.Treats__c , &quot;Heat&quot; ), &quot;Heat;&quot;,null) &amp;
+IF ( INCLUDES ( Product2.Treats__c , &quot;Fatigue&quot; ), &quot;Fatigue;&quot;,null) &amp;
+IF ( INCLUDES ( Product2.Treats__c , &quot;Dizziness&quot; ), &quot;Dizziness;&quot;,null) &amp;
+IF ( INCLUDES ( Product2.Treats__c , &quot;Dryness&quot; ), &quot;Dryness;&quot;,null) &amp;
+IF ( INCLUDES ( Product2.Treats__c , &quot;Dampness&quot; ), &quot;Dampness;&quot;,null) &amp;
+IF ( INCLUDES ( Product2.Treats__c , &quot;Rash&quot; ), &quot;Rash;&quot;,null) &amp;
+IF ( INCLUDES ( Product2.Treats__c , &quot;Shedding&quot; ), &quot;Shedding;&quot;,null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Treats</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

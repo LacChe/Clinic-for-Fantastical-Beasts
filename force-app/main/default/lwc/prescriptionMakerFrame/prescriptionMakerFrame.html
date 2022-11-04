@@ -1,0 +1,49 @@
+<template>
+    <div class="slds-grid slds-wrap slds-gutters">
+
+        <div class="slds-col slds-size_1-of-12">
+        </div>
+
+        <div class="slds-col slds-size_2-of-12">
+            <template if:true={contact}>
+                <c-contact-info contact={contact} account={account}></c-contact-info>
+            </template>
+        </div>
+
+        <div class="slds-col slds-grid slds-size_6-of-12 slds-wrap">
+            <div class="slds-col slds-size_12-of-12 slds-var-m-bottom_small">
+                <c-dialogue-box splash-screen={splashScreen} loading={loading} prescribing-stage={prescribingStage} oppty={oppty} payment={payment} price={price} beast={beast} contact={contact} account={account} treats={treats} sickness-symptoms={sicknessSymptoms}></c-dialogue-box>
+            </div>
+            
+            <div class="slds-col slds-size_2-of-12 slds-var-m-bottom_small">
+            </div>
+            <div class="slds-col slds-size_8-of-12 slds-var-m-bottom_small">
+                <c-treatment-box price={price} sickness-symptoms={sicknessSymptoms} treats={treats}></c-treatment-box>
+            </div>
+            <div class="slds-col slds-size_2-of-12 slds-var-m-bottom_small">
+            </div>
+
+            <div class="slds-col slds-size_2-of-12 slds-var-m-bottom_small">
+            </div>
+            <div class="slds-col slds-size_6-of-12 slds-var-m-bottom_small">
+                <lightning-card>
+                    <c-products-list onproductselection={handleProductSelection}></c-products-list>
+                </lightning-card>
+            </div>
+            <div class="slds-col slds-size_2-of-12 slds-var-m-bottom_small">
+                <c-progression-buttons finance={finance} ongetoppty={getOppty} onprescribe={prescribe} show-progression-buttons={showProgressionButtons} prescribing-stage={prescribingStage}></c-progression-buttons>
+            </div>
+            <div class="slds-col slds-size_2-of-12 slds-var-m-bottom_small">
+            </div>
+        </div>
+
+        <div class="slds-col slds-size_2-of-12">
+            <template if:true={beast}>
+                <c-beast-info beast={beast}></c-beast-info>
+            </template>
+        </div>
+        <div class="slds-col slds-size_1-of-12">
+        </div>
+
+    </div>
+</template>

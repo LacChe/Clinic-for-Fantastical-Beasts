@@ -1,0 +1,9 @@
+<template>
+    <lightning-card>
+        <template if:false={loading}>
+            <img alt="beastImage" src={beastImageUrl} class="slds-align_absolute-center slds-var-m-around_large" style="width: 85%; border-radius: 10%;  border: 5px solid #833F3F;"/>
+            <p class="slds-align_absolute-center" style="color: #833F3F; font-weight: bold; font-family:'Times New Roman'; font-size:20px">{beast.Name}</p>
+            <p class="slds-align_absolute-center slds-var-p-around_small" style="color: #833F3F; font-weight: bold; font-family:'Times New Roman'; font-size:20px">{beast.Species__c}</p>
+        </template>
+    </lightning-card>
+</template>
